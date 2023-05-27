@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@mixin display{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+@mixin reset{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+@mixin center{
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+@mixin none{
+    display: none;
+}
+@mixin column{
+    display: flex;
+    flex-direction:column;
+}
+@mixin font1{
+font-family:'Roboto', sans-serif;;
+
+}
+@mixin auto{
+    margin: auto;
+    max-width: 1200px;
+}

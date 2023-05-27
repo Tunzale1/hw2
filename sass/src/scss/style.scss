@@ -1,0 +1,173 @@
+@import "src/scss/display.scss";
+@import "src/scss/color.scss";
+
+.common{
+    @include auto;
+}
+.first{ 
+    color:$turqoise;
+}
+.menu{ background-color: $black;
+}
+.navbar-toggle{
+    @include none;
+}
+body{ 
+    @include font1;
+}
+header{
+    @include center;
+}
+main{
+    @include center;
+    margin-bottom:70px ;
+}
+.start{
+    text-align:start;
+}
+.__bold{
+        font-weight: 700;
+        font-size: 16px;
+}
+.__small{
+    color:$gray;
+    font-size:12px;
+}
+.__text{
+    font-size:$f14}
+.main2{
+   @include center;
+   background-color:$gwhite;
+   padding: 40px 0px 50px 0px ;  
+}
+.img1{
+    @include center;
+}
+ul{
+    @include center;
+    width: 95%;
+    @include display;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 51px;
+    margin-top: 45px;
+    font-size: 11px;
+}
+.contents{
+    @include display;
+    &__part{
+        @include display;
+        margin-bottom: 32px;
+    }
+    &__content{
+        text-align: start;
+        margin-left: 10px;
+    }  
+}
+.det{
+    @include auto;
+    @include display;
+}
+footer{
+    background-color: $black;
+    color: $white;
+    @include center;
+    padding: 60px 0px 70px 0px ;
+}
+@media screen and (max-width:768px){
+    .contents{
+        flex-direction: column;
+    }
+    .post{
+        @include display;
+        flex-wrap: nowrap;
+        &__1,&__2,&__3{
+            width:200px;
+            height: 200px ;
+        }
+        &__4{
+            @include none;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .navbar {
+        flex-wrap: wrap;
+      }
+    ul{
+        @include none;
+        @include reset;
+    }
+    li{
+        width: 100%;
+        line-height: 28px;
+        text-align: start;
+        padding-left: 5px;
+    }
+    li:hover{
+        background-color:$gray;
+        width: 98%;
+}
+    ul.active{
+        display: block;
+        position: absolute;
+        right:8px;
+        background-color:$wgray;
+        width: 50%;
+        height:190px;
+        
+    }
+    .navbar-toggle {
+        display: block;
+        width: 100%;
+        text-align: end;
+        margin-bottom: 20px;
+}}
+@media screen and (max-width:630px){
+    .post{
+        &__3{
+            @include none;
+        }
+    }
+}
+@media screen and (max-width:417px){
+    main{
+        margin-bottom: 30px;
+    }
+    h4{
+        font-size: $f14;;
+    }
+    .pixel{
+        font-size: 12px;
+    }
+    .img{
+        width:150px;
+        height: 140px;
+    }
+    .post{
+        @include display;
+        flex-wrap: nowrap;
+        &__1{
+            width:300px;
+            @include center;
+        }
+        &__2,&__3{
+            @include none;
+        }
+    }
+    #none{
+        @include none;
+    }
+    .contents{
+        @include column;
+        &__part{
+            @include column;
+        }
+    }
+    .__text{
+        @include none;
+    }
+    .none{
+        @include none;
+    }
+}
