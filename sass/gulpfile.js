@@ -64,15 +64,15 @@ gulp.task('dev', function () {
     server: './'
   });
 //Watch for changes in JS and SCSS files
-  gulp.watch('src/js/**/*.js', gulp.series('scripts'));
-  gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
+  gulp.watch('src/js/**/*.js', gulp.series('folder'));
+  gulp.watch('src/scss/**/*.scss', gulp.series('compileSass'));
 
 // Reload the HTML page
   gulp.watch('index.html').on('change', browserSync.reload);
 });
 
-// // Building task
-// gulp.task('build', gulp.series('clean', 'scss', 'css', 'js', 'default'));
+// Building task
+gulp.task('build', gulp.series( 'css','compileSass', 'js', 'folder', 'dev'));
 
 
 // Clean the dist folder

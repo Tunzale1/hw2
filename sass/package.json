@@ -2,9 +2,11 @@
   "name": "sass",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "script.js gulpfile.js",
   "scripts": {
-    "test": "index.html gulpfile.js"
+    "test": "script.js index.html gulpfile.js",
+      "dev": "gulp dev",
+      "build": "gulp build"
   },
   "author": "Tunzala",
   "license": "ISC",
